@@ -1,0 +1,10 @@
+[package]
+name = "bdev_btree"
+version = "0.0.1"
+edition = "2021"
+author = "Kuuwange <shellcodesniper@gmail.com>"
+license = "MIT"
+description = "BTree implementation for WAL, SAFE, and FAST, Flexible DataType"
+
+[dependencies]
+lazy_static = "1.4.0"

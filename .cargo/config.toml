@@ -1,0 +1,4 @@
+[env]
+MAX_KEY_SIZE = "3"
+MAX_PAGE_SIZE = "5"
+PAGE_HEADER_SIZE = "4"
