@@ -1,13 +1,13 @@
 use std::marker::PhantomData;
 
-use super::tree::BTree;
+use super::node::Node;
 
-pub struct BTreeBuilder<K, V> where K: Ord, V: ?Sized {
+pub struct BTreeBuilder<K, V> where K: Ord, {
   pub max_key_size: usize,
   pub max_page_size: usize,
   pub page_header_size: usize,
   pub root_path: String,
-  pub root_node: Option<BTree<K, V>>,
+  pub root_node: Option<Node<K, V>>,
   pub _markers: PhantomData<(K, V)>,
 }
 
@@ -46,7 +46,7 @@ impl<K: Ord, V: ?Sized> BTreeBuilder<K, V> {
     self
   }
 
-  pub fn build(&self) -> BTree<K, V> {
+  pub fn build(&self) -> Node<K, V> {
     
   }
 }
