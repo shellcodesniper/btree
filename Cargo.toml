@@ -2,9 +2,19 @@
 name = "bdev_btree"
 version = "0.0.1"
 edition = "2021"
-author = "Kuuwange <shellcodesniper@gmail.com>"
+authors = ["Kuuwange <shellcodesniper@gmail.com>"]
 license = "MIT"
 description = "BTree implementation for WAL, SAFE, and FAST, Flexible DataType"
+readme = "README.md"
+repository = "https://github.com/shellcodesniper/btree"
+keywords = ["cargo", "btree", "collections", "structure"]
+categories = ["core", "collections", "development-tools"]
+
+
+
+[badges]
+maintenance = { status = "experimental" }
+
 
 [dependencies]
 lazy_static = "1.4.0"
