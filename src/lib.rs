@@ -5,18 +5,9 @@ mod types;
 pub mod error;
 pub mod btree;
 
-
-lazy_static! {
-  static ref MAX_KEY_SIZE: usize = env!("MAX_KEY_SIZE").parse().unwrap_or_else(|_| {
-    panic!("MAX_KEY_SIZE must be a positive integer");
-  });
-  static ref MAX_PAGE_SIZE:  usize = env!("MAX_PAGE_SIZE").parse().unwrap_or_else(|_| {
-    panic!("MAX_PAGE_SIZE must be a positive integer");
-  });
-  static ref PAGE_HEADER_SIZE: usize = env!("PAGE_HEADER_SIZE").parse().unwrap_or_else(|_| {
-    panic!("PAGE_HEADER_SIZE must be a positive integer");
-  });
-}
+pub const BTREE_CAPACITY: usize = 4;
+pub const MAX_DATA_PAGE_SIZE: usize = 4096;
+pub const PAGE_HEADER_SIZE: usize = 4;
 
 #[cfg(test)]
 mod tests {

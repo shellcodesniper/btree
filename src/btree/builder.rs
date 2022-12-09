@@ -11,7 +11,7 @@ pub struct BTreeBuilder<K, V> where K: Ord, {
   pub _markers: PhantomData<(K, V)>,
 }
 
-impl<K: Ord, V: ?Sized> Default for BTreeBuilder<K, V> {
+impl<K: Ord, V> Default for BTreeBuilder<K, V> {
   fn default() -> Self {
     Self {
       max_key_size: 255,
@@ -23,7 +23,7 @@ impl<K: Ord, V: ?Sized> Default for BTreeBuilder<K, V> {
   }
 }
 
-impl<K: Ord, V: ?Sized> BTreeBuilder<K, V> {
+impl<K: Ord, V> BTreeBuilder<K, V> {
   pub fn new(path: &str) -> Self {
     Self {
       path: path.to_string(),

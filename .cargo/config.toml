@@ -1,4 +1,11 @@
 [env]
-MAX_KEY_SIZE = "3" # NOTE: MUST BE ODD NUMBER
-MAX_PAGE_SIZE = "5" # TODO: PAGING IS NOT IMPLEMENTED YET
-PAGE_HEADER_SIZE = "4" # TODO: IMPLEMENT PAGING
+BDEV_CAPACITY = "3" # NOTE : MUST BE ODD NUMBER [ 홀수여야만 함, 차수, DEGREE, 동일의미]
+# NOTE : tree's degree
+BDEV_MAX_DATA_PAGE_SIZE = "5" # TODO: PAGING IS NOT IMPLEMENTED YET
+# NOTE : max data per page
+BDEV_PAGE_HEADER_SIZE = "4" # TODO: IMPLEMENT PAGING
+# NOTE : page header size (for page header)
+
+[unstable]
+mtime-on-use = true
+build-std = ["core", "alloc"]
